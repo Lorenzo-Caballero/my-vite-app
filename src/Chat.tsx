@@ -75,8 +75,8 @@ const Chat: React.FC = () => {
             </div>
           </div>
           <div className="logo-container">
-    <img src='../logo-blanco.png' alt='Aoki Logo' className='logo' />
-  </div>
+            <img src='../src/assets/logo-blanco.png' alt='Aoki Logo' className='logo' />
+          </div>
           {chatAbierto && (
             <div className="absolute bottom-20 right-40 z-10">
               <div className="chat-container" ref={chatRef}>
