@@ -1,0 +1,195 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; /* Fondo general de la aplicación */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  pointer-events: none;
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca el spline detrás de otros elementos */
+}
+
+/* Resto del archivo... */
+
+
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+
+.chat-container {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 400px;
+  max-height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  background-color: rgba(160, 216, 241, 0.8); /* Ajusta la opacidad según sea necesario */
+  font-family: 'Inter', sans-serif;
+  z-index: 10;
+  pointer-events: auto;
+
+  /* Efecto de borde claro */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según sea necesario */
+
+  /* Efecto de neón */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+              0 0 20px rgba(255, 255, 255, 0.4),
+              0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.chat {
+  height: 250px; /* Ajustar la altura del área de mensajes según sea necesario */
+  overflow-y: scroll;
+  padding: 15px;
+}
+
+.message {
+  margin-bottom: 12px;
+  padding: 12px;
+  background-color: #1d78f0;
+  border-radius: 8px;
+}
+
+.usuario {
+  text-align: right;
+  background-color: #1bcbeb;
+  color: #fff;
+}
+
+.openai {
+  text-align: left;
+  background-color: #1bcbeb;
+  color: #fff;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #32beff;
+  border-radius: 8px;
+}
+
+.input-message {
+  flex: 1;
+  padding: 12px;
+  margin-right: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none; /* Elimina el contorno predeterminado de enfoque del input */
+  transition: border-color 0.25s;
+}
+
+.input-message:focus {
+  border-color: #20c0ff; 
+}
+.send-button {
+  padding: 12px;
+  background-color: #20c0ff;
+  color: #fff;
+  border-width: 2px;
+  display: flex;
+  justify-content: center;
+  border-style: solid; 
+  border-color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+button {
+  margin: auto;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+.spline-chat-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Permitir que los eventos de puntero pasen a través del contenedor */
+}
+
+.spline-chat-container > div {
+  pointer-events: auto; /* Permitir eventos de puntero en el contenido del contenedor */
+}
+.logo-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  max-width: 150px;
+  z-index: 11; /* Asegura que el logo esté encima del chat */
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #fbfcff;
+
+    font-size: 19px;
+  }
+  a:hover {
+    color: #747bff;
+  }
+
+}
