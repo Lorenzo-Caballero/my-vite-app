@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
-export const obtenerRespuestaAoki = async (userMessage: string) => {
+export const obtenerRespuestaAoki = async (userMessage) => {
   try {
     const respuesta = await axios.post(
       apiUrl,
