@@ -25,10 +25,7 @@ const Chat: React.FC = () => {
   `;
 
   const handleEnviarMensaje = async () => {
-    // Añadir el nuevo mensaje al historial de mensajes
     setMensajes((prevMensajes) => [...prevMensajes, { texto: nuevoMensaje, origen: 'usuario' }]);
-
-    // Construir el prompt con el contexto de Aoki y el mensaje del usuario
     const promptAoki = `
     ${contextoAoki}
     Usuario: ${nuevoMensaje}
@@ -55,9 +52,7 @@ const Chat: React.FC = () => {
     setNuevoMensaje('');
   };
 
-  const handleToggleChat = () => {
-    setChatAbierto(!chatAbierto);
-  };
+
 
   const handleBackgroundClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (e.target === e.currentTarget) {

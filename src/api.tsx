@@ -1,4 +1,3 @@
-// api.ts
 import axios from 'axios';
 
 const apiUrl = 'https://api.openai.com/v1/chat/completions';
