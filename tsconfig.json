@@ -6,7 +6,6 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "types": ["textrazor"],
-    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
